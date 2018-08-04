@@ -25,6 +25,15 @@
     </head>
 
   <body>
-    <%= yield %>
+    
+
+    <div class="container" id="downhere">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+  </div>
+  
+  <%= yield %>
+  
   </body>
 </html>

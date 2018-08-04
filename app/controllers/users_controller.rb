@@ -1,16 +1,32 @@
 class UsersController < ApplicationController
 
     def new
-        @users = User.new
+        @user = User.new
     end
 
     def create
-        @user = User.create(first_name: params[:user][:first_name], last_name: params[:user][:last_name], pseudo: params[:user][:pseudo], email: params[:user][:email], password: params[:user][:password])
-        redirect_to @user
+        @user = User.create(user_params)
+        if @user.save
+            flash[:success] = 'Utilisateur créé'
+            #flash quand il y a un redirect_to (retourne une action et renvoie sur new view)
+            redirect_to @user
+        else
+            flash.now[:danger] = 'Erreur'
+            #Flash.now quand il y a un render (pas d'action. Affiche seulement une vue)
+            render 'new'
+        end
     end
 
     def show
         @user = User.find_by_id(params[:id])
     end
 
+
+    private
+    #Methodes autres que CRUD
+
+    def user_params
+        params.require(:user).permit(:first_name, :last_name, :pseudo, :email, :password)
+        #Pour l'attribut :user, prendre les infos demandées. Peuvent etre utilisées plus facilement
+    end
 end
