@@ -1,0 +1,38 @@
+<h1>Inscription</h1>
+
+
+<div class="row justify-content-center">
+	<div class="col-lg-8">
+
+	<%= form_for @users, url: users_path, html: {class: "nifty_form"} do |f| %>
+
+		<div class="form-group">
+			<%= f.label(:first_name, "Saisir ton Nom :") %>
+		  	<%= f.text_field :first_name, { class: 'form-control' } %>
+        </div>
+        
+        <div class="form-group">
+			<%= f.label(:last_name, "Saisir ton Prénom :") %>
+		  	<%= f.text_field :last_name, { class: 'form-control' } %>
+        </div>
+        
+        <div class="form-group">
+			<%= f.label(:pseudo, "Choisir un pseudo :") %>
+		  	<%= f.text_field :pseudo, { class: 'form-control' } %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label(:email, "Ton email :") %>
+		  	<%= f.text_field :email, { class: 'form-control' } %>
+		</div>
+
+        <div class="form-group">
+            <%= f.label 'Saisis un mot de passe' %>
+            <%= f.password_field :password, class:"form-control", placeholder:"Mot de passe" %>
+        </div>
+
+        <%= f.submit("Envoyer", class: 'btn btn-outline-dark') %>
+        
+	<% end %>
+	</div>
+</div>
