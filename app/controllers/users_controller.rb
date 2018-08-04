@@ -9,6 +9,8 @@ class UsersController < ApplicationController
         if @user.save
             flash[:success] = 'Utilisateur créé'
             #flash quand il y a un redirect_to (retourne une action et renvoie sur new view)
+            log_in @user
+            #Dès que le user a créé son compte il est loggé
             redirect_to @user
         else
             flash.now[:danger] = 'Erreur'
