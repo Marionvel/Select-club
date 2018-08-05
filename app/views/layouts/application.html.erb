@@ -8,33 +8,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="/">Accueil <span class="sr-only">(current)</span></a>
-        <% if logged_in? %>
-        <%= link_to "Page utilisateur", user_path(current_user), class:"nav-item nav-link" %>
-        <%= link_to "Deconnexion", logout_path, method: :delete, class:"nav-item nav-link" %>
-        <% else %>
-        <%= link_to "Se connecter", login_path, class:"nav-item nav-link" %>
-        <%= link_to "Nouvel utilisateur", new_user_path, class:"nav-item nav-link" %>
-      <% end %>
-    </div>
-  </div>
-</nav>
-    
-    
-        </head>
-
+  </head>
   <body>
     
-
+    <div class="topnav">
+    <a class="active" href="/">Home</a>
+    <% if logged_in? %>
+        <%= link_to "Page utilisateur", user_path(current_user)%>
+        <%= link_to "Deconnexion", logout_path, method: :delete%>
+        <% else %>
+        <%= link_to "Se connecter", login_path%>
+        <%= link_to "Nouvel utilisateur", new_user_path%>
+    <% end %>
+</div>
+<br>
     <div class="container" id="downhere">
     <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <br>
     <% end %>
   </div>
   
