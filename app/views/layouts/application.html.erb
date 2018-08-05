@@ -15,8 +15,8 @@
     <a class="active" href="/">Home</a>
     <% if logged_in? %>
         <%= link_to "Mon profil", user_path(current_user)%>
-        <%= link_to "Nouvel Article", user_path(current_user)%>
-        <%= link_to "Mes Articles", user_path(current_user)%>
+        <%= link_to "Nouvel Article", article_path(current_user)%>
+        <%= link_to "Mes Articles", article_path(current_user)%>
         <%= link_to "Deconnexion", logout_path, method: :delete%>
         
         <% else %>

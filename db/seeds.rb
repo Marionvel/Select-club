@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 a = User.create(first_name: 'Marion', last_name: 'l', pseudo: 'peachy', email: 'marion@gmail.com', password: 'iiiii' )
+b = Article.create(title: 'Marion', content: 'sjkdjfdsf qksdjlksqkdlqs kqjdjqkjkjskjd', user_id: 1)
