@@ -14,8 +14,11 @@
     <div class="topnav">
     <a class="active" href="/">Home</a>
     <% if logged_in? %>
-        <%= link_to "Page utilisateur", user_path(current_user)%>
+        <%= link_to "Mon profil", user_path(current_user)%>
+        <%= link_to "Nouvel Article", user_path(current_user)%>
+        <%= link_to "Mes Articles", user_path(current_user)%>
         <%= link_to "Deconnexion", logout_path, method: :delete%>
+        
         <% else %>
         <%= link_to "Se connecter", login_path%>
         <%= link_to "Nouvel utilisateur", new_user_path%>

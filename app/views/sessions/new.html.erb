@@ -18,6 +18,12 @@
         <%= f.label :password %>
         <%= f.password_field :password, class: 'form-control' %>
     </div>
+
+    <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span>Remember me on this computer</span>
+      <% end %>
+      
     <br>
     <%= f.submit "Log in", class: 'btn btn-outline-dark' %><a href="/users/new>S'inscrire</a>"
     <br>
