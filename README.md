@@ -1,24 +1,19 @@
-# README
+CLUB PRIVE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+=============
 
-Things you may want to cover:
+## Créateurs
 
-* Ruby version
+@Marion 
 
-* System dependencies
+## Comment acceder à l'application ?
 
-* Configuration
+Via ce lien -> [Club Privé](https://privateclub.herokuapp.com/)
 
-* Database creation
+## Explications de l'application
 
-* Database initialization
+Créer un compte sur cette application ou log toi avec ces identifiants :
+test@gmail.com
+test
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
