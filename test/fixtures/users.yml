@@ -9,3 +9,17 @@ one: {}
 #
 two: {}
 # column: value
+
+roger:
+  first_name: roger
+  last_name: roger
+  pseudo: roger
+  email: roger@roger.com
+  password_digest: <%= User.digest('password') %>
+
+poussin:
+  first_name: poussin
+  last_name: poussin
+  pseudo: poussin
+  email: poussin@poussin.com
+  password_digest: <%= User.digest('password') %>
