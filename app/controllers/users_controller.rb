@@ -20,7 +20,11 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = User.find_by_id(params[:id])
+        @user = User.find(params[:id])
+       # if current_user.id != @user.id
+           # flash[:danger] = 'Touche pas à ça coquin'
+           # redirect_to '/'
+        #end
     end
 
     def index
