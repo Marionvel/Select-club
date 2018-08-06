@@ -1,0 +1,10 @@
+<br>
+<div class="row justify-content-center">
+<h1>liste des Utilisateurs</h1>
+</div>
+
+<br>
+<% @users.each do |user| %>
+    <li><%= user.pseudo %></li>
+<% end %>
+</ul>

@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-a = User.create(first_name: 'Marion', last_name: 'l', pseudo: 'peachy', email: 'marion@gmail.com', password: 'iiiii' )
-b = Article.create(title: 'Marion', content: 'sjkdjfdsf qksdjlksqkdlqs kqjdjqkjkjskjd', user_id: 1)
+a = User.create(first_name: 'Jean Michel', last_name: 'Ironie', pseudo: 'Jean Michel Ironie', email: 'jmi@gmail.com', password: 'iiiii' )
+b = User.create(first_name: 'Jean Marc', last_name: 'l', pseudo: 'Paul HAUCHON', email: 'ph@gmail.com', password: 'iiiii' )
